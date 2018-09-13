@@ -20,3 +20,7 @@ Then in the html you can write
 which will output 
 
 `<p>Lou<p>`
+
+# Recaptcha
+
+I've also included a valid key for testing with the recaptcha script in checkCaptcha Template.js

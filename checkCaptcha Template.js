@@ -7,7 +7,7 @@ exports.checkCaptcha = function (req, res) {
 	        uri: 'https://recaptcha.google.com/recaptcha/api/siteverify',
 	        method: 'POST',
 	        formData: {
-	            secret: '6Lef510UAAAAACOoGmTQWtzXB3Zuoc6-Dbu1LgN-',
+	            secret: '6LfdDHAUAAAAALbB27pRHZsUDLHBktCHO592oFSr',
 	            response: response
 	        },
 	        json: true

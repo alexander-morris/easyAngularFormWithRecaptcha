@@ -5,21 +5,27 @@ console.log('loaded ');
 // Checkcaptcha submits the API call only as a byproduct of the captcha call but you can swap in any calls you want
 
 
-angular.module('reportManager', ['vcRecaptcha'])
-.controller('reportCtrl',[ '$http', '$scope', '$window', function( $http, $scope, $window ){
+angular.module('reportsManager', ['vcRecaptcha'])
+.controller('reportsCtrl',[ '$http', '$scope', '$window', function( $http, $scope, $window ){
 
-	$scope.server = "http://localhost:8887/";
+	$scope.server = "http://localhost:8887/"; // Replace the server URL here.
 
 	//  
 	$scope.init = function () {
 
 
-		$scope.supportedCurrencies = [{
-			"name":"BTC"
+		$scope.supportedOffenses = [{
+			"name":"fraudulent"
 		},{
-			"name":"ETH"
+			"name":"phishing"
+		},{
+			"name":"misleading"
+		},{
+			"name":"slanderous"
+		},{
+			"name":"other"
 		}];
-		console.log($scope.supportedCurrencies);
+		console.log($scope.supportedOffenses);
 
 		$scope.display = [
 			"",
@@ -67,7 +73,7 @@ angular.module('reportManager', ['vcRecaptcha'])
 
     $scope.checkCaptcha = function (cb) {
 
-    	var payload = {};
+    	var payload = {}; // Fill this variable with the data to pass to the server
 
 		// console.log('testing captcha');
 		payload.response = $scope.response;

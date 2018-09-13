@@ -11,8 +11,6 @@
     <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
-    <link rel='stylesheet' id='cryptocoins-css'  href='./css/cryptocoins.css'> 
-    <link rel='stylesheet' id='custom-css'  href='./css/style.css'> 
 
 
     <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-functions.js"></script>
@@ -22,7 +20,6 @@
     <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-messaging.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://rawgit.com/VividCortex/angular-recaptcha/master/release/angular-recaptcha.js"></script>
-    <script type="text/javascript" src="scripts/qrcode.js"></script>
 
 
   </head>
@@ -34,9 +31,9 @@
         <div class="offenseSelect {{display[0]}}">
             <h1></h1>
             <fieldset class="offenseList" ng-model="offense" >
-                <div class="radioSet" ng-repeat="x in supportedCurrencies">
+                <div class="radioSet" ng-repeat="x in supportedOffenses">
                     <input type="radio" ng-model="offense"  class="offenseIcon" value="{{x.name}}" id="{{x.name}}" name="offenseSelect"/>
-                    <label for="{{x.name}}" ng-click="setoffense(x.name);"><i class="cc {{x.name}}"> {{x.name}}</i></label>
+                    <label for="{{x.name}}" ng-click="setoffense(x.name);">{{x.name}}</label>
                 </div>
             </fieldset>
             <br>           
@@ -48,7 +45,7 @@
             <div
                 vc-recaptcha
                 theme="'light'"
-                key="key"
+                key='6LfdDHAUAAAAACB7yJbkHuE_1IFZmGMNKdJrVa9a' 
                 on-create="setWidgetId(widgetId)"
                 on-success="setResponse(response)"
                 on-expire="cbExpiration()"
