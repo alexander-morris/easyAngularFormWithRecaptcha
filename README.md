@@ -1,4 +1,4 @@
-# trust_web
+# Easy angular form
 
 Just has a basic form for now. 
 
